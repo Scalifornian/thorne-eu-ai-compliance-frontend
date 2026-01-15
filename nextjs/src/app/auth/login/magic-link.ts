@@ -1,14 +1,11 @@
-Στο νέο αρχείο `magic-link.ts` που άνοιξε, **επικόλλησε αυτόν τον κώδικα** και μετά πάτα **Commit changes**:
+'use client';
 
-```ts
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+import { createSPASassClient } from '@/lib/supabase/client';
 
 export async function sendMagicLink(email: string) {
+  const client = await createSPASassClient();
+  const supabase = client.getSupabaseClient();
+
   const { error } = await supabase.auth.signInWithOtp({
     email,
     options: {
@@ -16,8 +13,5 @@ export async function sendMagicLink(email: string) {
     },
   });
 
-  if (error) {
-    throw error;
-  }
+  if (error) throw error;
 }
-```
