@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic'
+
+
 import "./globals.css";
 import localFont from "next/font/local";
 import Header from "./components/Header";
