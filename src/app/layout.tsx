@@ -1,3 +1,4 @@
+import "./globals.css";
 import localFont from "next/font/local";
 import Header from "./components/Header";
 
@@ -37,17 +38,16 @@ export default function RootLayout({
     <html lang="en" className={sfProDisplay.variable}>
       <body
         style={{
-          minHeight: "100vh",
-          margin: 0,
           color: "#1C1F26",
           fontFamily:
             "var(--font-sf-pro), -apple-system, BlinkMacSystemFont, sans-serif",
-          background:
-            "radial-gradient(900px 600px at 20% 80%, rgba(238,230,255,0.45) 0%, rgba(238,230,255,0) 65%), radial-gradient(900px 600px at 85% 15%, rgba(220,240,255,0.45) 0%, rgba(220,240,255,0) 65%), linear-gradient(135deg, #F8FAFF 0%, #EEF2FF 40%, #F6F8FF 100%)",
         }}
       >
-        <Header />
-        {children}
+        <div id="thorn-bg" aria-hidden="true" />
+        <div style={{ position: "relative", zIndex: 1, minHeight: "100vh" }}>
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

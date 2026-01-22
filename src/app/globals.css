@@ -1,0 +1,18 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #eef2ff; /* MUST match SVG edge color */
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+/* Full viewport background layer */
+#thorn-bg {
+  position: fixed;
+  inset: -20vh -20vw; /* overdraw beyond viewport */
+  background: #eef2ff url("/thorne-background.svg") center / cover no-repeat;
+  z-index: 0;
+  pointer-events: none;
+}

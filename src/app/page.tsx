@@ -1,40 +1,60 @@
+import localFont from "next/font/local";
+
+const newYorkMedium = localFont({
+  src: "../../public/fonts/new-york-extra-large/NewYorkExtraLarge-Medium.woff2",
+  weight: "500",
+  style: "normal",
+  display: "swap",
+});
+
 export default function Home() {
   return (
     <main
       style={{
         maxWidth: "1200px",
         margin: "0 auto",
-        padding: "120px 32px 0 32px",
+        padding: "180px 32px 0 32px", // moved the blocks lower
       }}
     >
       <div style={{ maxWidth: "740px" }}>
         <h1
+          className={newYorkMedium.className}
           style={{
-            fontSize: "64px",
-            lineHeight: "1.05",
+            fontSize: "72px",
+            lineHeight: "0.95",
             fontWeight: 500,
-            letterSpacing: "-0.03em",
+            letterSpacing: "-0.025em",
             margin: 0,
+            color: "#314D55",
           }}
         >
-          Regulatory intelligence,
+          Regulatory
           <br />
-          engineered for
+          intelligence,
           <br />
-          certainty.
+          engineered
+          <br />
+          for certainty
         </h1>
 
         <p
           style={{
-            marginTop: "20px",
-            fontSize: "16px",
-            lineHeight: "1.5",
-            color: "rgba(28,31,38,0.75)",
-            maxWidth: "520px",
+            marginTop: "28px",
+            fontFamily:
+              "var(--font-sf-pro), -apple-system, BlinkMacSystemFont, sans-serif",
+            fontSize: "20px",
+            lineHeight: "1.2",
+            fontWeight: 400,
+	    letterSpacing: "0.03em",
+            color: "#314D55",
+            maxWidth: "560px",
           }}
         >
-          Turn EU AI Act requirements into clear, auditable compliance that is
-          documented, structured, and ready for regulators.
+          Turn <b>EU AI Act requirements</b>  into clear,
+          <br />
+          auditable compliance that is documented,
+          <br />
+          structured, and <b>ready for regulators</b>.
         </p>
       </div>
     </main>
