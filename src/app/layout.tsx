@@ -31,6 +31,14 @@ export const metadata = {
   description: "EU AI Act compliance tooling",
   icons: {
     icon: "/icon.png",
+    apple: "/apple-icon.png",
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#000000",
+      },
+    ],
   },
 };
 
