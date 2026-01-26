@@ -12,7 +12,7 @@ body {
 #thorn-bg {
   position: fixed;
   inset: -20vh -20vw; /* overdraw beyond viewport */
-  background: #eef2ff url("/thorne-background.svg") center / cover no-repeat;
+  background: #eef2ff url("/thorne-background.JPG") center / cover no-repeat;
   z-index: 0;
   pointer-events: none;
 }
