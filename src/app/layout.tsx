@@ -1,5 +1,4 @@
-export const dynamic = 'force-dynamic'
-
+export const dynamic = "force-dynamic";
 
 import "./globals.css";
 import localFont from "next/font/local";
@@ -30,6 +29,9 @@ const sfProDisplay = localFont({
 export const metadata = {
   title: "THØRN EU AI Compliance",
   description: "EU AI Act compliance tooling",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
